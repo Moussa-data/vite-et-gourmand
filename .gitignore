@@ -1,0 +1,41 @@
+# === Système ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# === Éditeurs ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# === Dépendances ===
+/vendor/
+/node_modules/
+
+# === Configuration sensible ===
+config/database.local.php
+config/secrets.php
+.env
+.env.local
+
+# === Logs ===
+*.log
+/logs/
+
+# === Uploads utilisateurs (à régénérer à la demo) ===
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# === Cache ===
+/cache/
+/tmp/
+
+# === Composer ===
+composer.phar
+
+# === Mac OS ===
+._*
+.Spotlight-V100
+.Trashes

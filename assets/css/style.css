@@ -1,0 +1,168 @@
+/**
+ * Vite & Gourmand — Feuille de styles principale
+ * À enrichir au fil du projet. Importe `variables.css` avant.
+ */
+
+/* === Reset minimal === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin: 0 0 var(--space-md);
+    line-height: 1.2;
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); }
+h2 { font-size: var(--fs-h2); font-weight: var(--fw-semibold); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-semibold); }
+
+p {
+    margin: 0 0 var(--space-md);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* === Layout === */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-lg);
+}
+
+/* === Hero (page d'accueil temporaire) === */
+.hero {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-lg);
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.hero__title {
+    color: var(--color-bg);
+    font-size: 3.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.hero .amp {
+    color: var(--color-secondary);
+}
+
+.hero__tagline {
+    font-family: var(--font-body);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: var(--fs-small);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.hero__intro {
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* === Boutons === */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-weight: var(--fw-medium);
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-bg);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/* === Cards === */
+.card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+/* === Utilitaires === */
+.muted {
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+}
+
+/* === Footer === */
+.footer {
+    text-align: center;
+    padding: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: var(--fs-small);
+    background-color: var(--color-bg-card);
+}
+
+/* === Responsive === */
+@media (max-width: 640px) {
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    .container {
+        padding: var(--space-lg) var(--space-md);
+    }
+}
